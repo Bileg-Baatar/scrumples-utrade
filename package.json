@@ -1,0 +1,26 @@
+{
+  "name": "utrade",
+  "version": "1.0.0",
+  "description": "utrade is E-commerce website developed by the team Scrumples for final project.",
+  "main": "utrade.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon utrade.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bileg-Baatar/scrumples-utrade.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bileg-Baatar/scrumples-utrade/issues"
+  },
+  "homepage": "https://github.com/Bileg-Baatar/scrumples-utrade#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mssql": "^6.3.1",
+    "tedious": "^11.0.7"
+  },
+  "keywords": []
+}

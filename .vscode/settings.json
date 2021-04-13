@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/12c49542-eff9-4541-ac04-16ed9b1d3eba/resourceGroups/utrade/providers/Microsoft.Web/sites/utrade-scrumples",
+    "appService.deploySubpath": "."
+}

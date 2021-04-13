@@ -30,11 +30,12 @@ app.set('view engine', 'hbs');
 //Define Routes
 app.use('/', require('./routes/pages'));
 app.use('/auth', require('./routes/auth'))
-app.listen(5001, () => {
-    console.log("Server started on port 5001");
+const port = process.env.PORT || 5001;
+app.listen(port, () => {
+    console.log("Server started on port"+ port);
 
  
-     
+      
 }
 
 )

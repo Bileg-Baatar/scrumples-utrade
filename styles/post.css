@@ -1,0 +1,85 @@
+/* Nav bar styling*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4CAF50;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #4CAF50;
+    opacity: 0.8;
+  }
+
+  button {
+    background-color: #4CAF50;
+    text-align: center;
+    color: white;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    }
+
+    button:hover {
+    opacity: 0.8;
+    }
+
+/* Form container styles*/
+
+* {
+    font-size: 22px;
+    font-family: Optima, sans-serif;
+}
+
+textarea {
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+    width: 98%;
+}
+
+.box {
+    display:inline-block;
+    width:33.3%;
+}
+
+h1 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+#name-input {
+    width: 30%;
+}
+
+#img{
+  font-size: 20px;
+}
+
+#submit-btn {
+    margin-top: 20px;
+    background-color: #4CAF50;
+    text-align: center;
+    color: white;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}

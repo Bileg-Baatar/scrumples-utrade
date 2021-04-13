@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" href="../styles/post.css">
+</head>
+<body>
+    <!-- Nav bar-->
+    <ul>
+        <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+
+    <!-- Form to upload to database-->
+    <div class = "box"></div>
+    <div class = "box">
+        <h1>Create Post</h1>
+        <From Name = "" Method="POST" Action="">
+
+            <label for="name">Name of item: </label>
+            <Input id = "name-input" Type = "text" id = "name" name = "name"><br><br>
+
+
+            <label for="description">Description of item:</label><br><br>
+
+            <textarea id="description" name="description" placeholder = "Item description..." rows="7" cols="33"></textarea><br><br>
+
+
+            <label for="img">Select image to upload </label>
+            <Input Type = "File" id = "img" name = "img" accept = "image/*"><br><br>
+
+
+            <input id = "submit-btn" type = "submit">
+        </From>
+    </div>
+    <div class = "box"></div>
+</body>
+</html>

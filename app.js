@@ -1,22 +1,41 @@
 const express = require("express");
 const app = express();
+const path = require("path");
 const sql = require('mssql');
-const path = require('path');
 
-const config ={
 
+var config = {
     user: 'scrumples',
     password: 'Utrade1234',
     server: 'utrade.database.windows.net',
+    port: 1433,
     database: 'utrade-scrumples',
-    "options": {
-        "encrypt": true,
-        "enableArithAbort": true
-    }
-};
+    options: {
+        encrypt: true,
+        connectTimeout:15000,
+        requestTimeout:150000
+    },
+    
+}
 
-sql.connect(config);
-const request = new sql.Request();
+var conn = new sql.ConnectionPool(config);
+
+conn.connect().then(function (){
+    var req = new sql.Request(conn);
+
+    req.query("SELECT email FROM [dbo].[users]")
+    .then(function(recordset){
+    console.log(recordset);
+    conn.close();
+    });
+});
+
+
+
+
+
+
+
 
 const publicDirectory = path.join(__dirname, './public');
 app.use(express.static(publicDirectory)); 
@@ -33,7 +52,7 @@ app.use('/', require('./routes/pages'));
 app.use('/auth', require('./routes/auth'))
 const port = process.env.PORT || 5001;
 app.listen(port, () => {
-    console.log("Server started on port"+ port);
+    console.log('Server started at http://localhost:'+port);
 
  
       

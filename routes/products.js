@@ -14,7 +14,7 @@ var Category = require('../models/category');
  * GET all products
  */
 router.get('/', function (req, res) {
-router.get('/', isUser, function (req, res) {
+
 
     Product.find(function (err, products) {
         if (err)
@@ -26,7 +26,7 @@ router.get('/', isUser, function (req, res) {
         });
     });
 });
-});
+
 
 
 /*
